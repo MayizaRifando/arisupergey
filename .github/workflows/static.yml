@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GM Caps</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #0f0f0f;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 50px;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #e50914;
+        }
+
+        header nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 300;
+            transition: color 0.3s;
+        }
+
+        header nav ul li a:hover {
+            color: #e50914;
+        }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(to bottom, #1a1a1a, #0f0f0f);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            animation: fadeInDown 1.5s ease;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            animation: fadeInUp 1.5s ease;
+        }
+
+        .hero a {
+            padding: 15px 30px;
+            background: #e50914;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(229, 9, 20, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .hero a:hover {
+            transform: scale(1.1);
+        }
+
+        .sections {
+            padding: 50px 20px;
+        }
+
+        .sections h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            color: #e50914;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+
+        .card p {
+            color: #ddd;
+            font-size: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #0f0f0f;
+            color: #e50914;
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">GM Caps</div>
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#">Productos</a></li>
+            <!-- Enlace actualizado para redirigir a una página externa personalizada -->
+            <li><a href="https://instagram.com" target="_blank">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="hero">
+    <div>
+        <h1>Bienvenido a GM Caps</h1>
+        <p>Gorritas belikonas</p>
+        <a href="#servicios">Descubre más</a>
+    </div>
+</div>
+
+<section id="servicios" class="sections">
+    <h2>Nuestros Servicios</h2>
+    <div class="grid">
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200" alt="Servicio 1">
+            <h3>Belikeando Ando</h3>
+            <p>Luce bien beliko, que no parezca q vas saliendo de la obra.</p>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200" alt="Servicio 2">
+            <h3>PROXIMAMENTE</h3>
+            <p>PROXIMAMENTE</p>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200" alt="Servicio 3">
+            <h3>PROXIMAMENTE</h3>
+            <p>PROXIMAMENTE</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 GM Caps. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
